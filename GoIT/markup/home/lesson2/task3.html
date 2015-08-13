@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form>
+    <p><b>Name:</b><br>
+        <input name="login" type="text" size="20">
+    </p>
+    <p><b>Email:</b><br>
+        <input name="email" type="email">
+    </p>
+    <p><b>Sex:</b><br>
+        <input type="radio" name="sex" value="male" />Male
+        <input type="radio" name="sex" value="female" checked="checked" />Female
+    </p>
+    <p><b>Current status:</b><br>
+        <input type="checkbox" name="status" value="student" />Student
+        <br/>
+        <input type="checkbox" name="status" value="employed" checked="checked"/>Employed
+        <br/>
+        <input type="checkbox" name="status" value="unemployed"/>Unemployed
+        <br/>
+    </p>
+    <p><b>Month and Year of birth:</b><br>
+        <select name="month">
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+        </select>
+        <select name="year">
+            <option>1991</option>
+            <option>1992</option>
+            <option>1993</option>
+            <option>1994</option>
+        </select>
+    </p>
+    <p><b>Skills and Technologirs:</b><br>
+    <p><select size="10" multiple name="skills[]">
+    <optgroup label="Tech skills">
+        <option value="t1">HTML</option>
+        <option value="t2">CSS</option>
+        <option value="t3">JavaScript</option>
+        <option value="t4">git</option>
+    </optgroup>
+    <optgroup label="Soft skills">
+        <option value="s1">Time management</option>
+        <option value="s2">Proactivity</option>
+        <option value="s3">Teamwork</option>
+        <option value="s4">Leasership</option>
+    </optgroup>
+    </select></p>
+    <p><b>Photo:</b><br>
+        <input name="photo" type="file">
+    </p>
+    <p><b>Comments:</b><br>
+        <textarea name="comments" cols="20" rows="3"></textarea>
+    </p>
+    <input name="save" type="submit" value="Save" />
+</form>
+</body>
+</html>
