@@ -1,0 +1,26 @@
+div{
+    color: #A23CD0;
+}
+li{
+    font-family: Economica;
+    font-weight: bold;
+    display: inline-block;
+    text-transform: uppercase;
+    border: solid 2px #EEEEEE;
+    padding: 5px;
+    margin: auto;
+    border-radius: 5px;
+    min-width: 20px;
+    min-height: 20px;
+    text-align:center;
+}
+.word,
+.gap{
+    border: none;
+}
+li:hover,
+li:focus{
+    border: solid 2px #b13eff;
+    background-color: #b13eff;
+    color: #FFF;
+}
