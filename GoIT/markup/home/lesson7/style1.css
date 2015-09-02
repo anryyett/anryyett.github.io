@@ -1,0 +1,57 @@
+.sivtsev{
+    width: 400px;
+    font-family: arial, sans-serif;
+    font-size: 95px;
+    color: rgba(0,0,0,0);
+    text-shadow: 0 0 3px #555555;
+    line-height: 9px;
+    margin: auto;
+}
+.sivtsev p{
+    text-align: justify;
+}
+.sivtsev p::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+.uline {
+    border-bottom: 2px solid;
+    border-color: rgba(255, 0, 0, 0.2);
+    position: relative;
+    top: -5px;
+}
+
+.sight02{
+    font-size: calc(1em - 1em/12);
+}
+.sight03{
+    font-size: calc(1em - 2em/12);
+}
+.sight04{
+    font-size: calc(1em - 3em/12);
+}
+.sight05{
+    font-size: calc(1em - 4em/12);
+}
+.sight06{
+    font-size: calc(1em - 5em/12);
+}
+.sight07{
+    font-size: calc(1em - 6em/12);
+}
+.sight08{
+    font-size: calc(1em - 7.5em/12);
+}
+.sight09{
+    font-size: calc(1em - 9em/12);
+}
+.sight10{
+    font-size: calc(1em - 10em/12);
+}
+.sight15{
+    font-size: calc(1em - 10.5em/12);
+}
+.sight20{
+    font-size: calc(1em - 11em/12);
+}
