@@ -1,0 +1,108 @@
+.companyName{
+    margin: auto;
+}
+.header{
+    display: block;
+    height: 80px;
+    width: 1023px;
+    padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo{
+    font-family: Futura, Trebuchet MS, Arial, sans-serif;
+    font-weight: bold;
+    color: #3070A8;
+    font-size: 28px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    float: left;
+}
+.logo span{
+    color: #EE8129;
+    font-weight: lighter;
+    text-transform: none;
+}
+.menu{
+    float: left;
+    margin-top: 0;
+    padding-top: 15px;
+}
+.menu li{
+    text-transform: uppercase;
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 4px solid transparent;
+}
+.menu li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #989898;
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+    height: 60px;
+}
+.menu li:hover{
+    border-bottom: 4px solid #3070A8;
+}
+.menu li:hover a{
+    color: #3070A8;
+}
+.about{
+    background: url("../images/about.jpg") 100% 100% no-repeat;
+    max-width: 100%;
+    background-size: cover;
+    height: 585px;
+    text-align: center;
+    padding-top: 1px;
+    margin-top: -1px;
+}
+.about-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    color:  #ffffff;
+    width: 870px;
+    margin: 152px auto 0;
+    font-weight: 100;
+}
+.about-title span {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 46px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.about-text {
+    font-family: "Calibri Italic", sans-serif;
+    font-style: italic;
+    font-size: 19px;
+    font-weight: 100;
+    line-height: 1.5;
+    text-align: center;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    padding: 0 155px;
+    color:  #ffffff;
+    width: 576px;
+    margin: 35px auto 0;
+}
+.about-button {
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin: 35px auto 0;
+    padding: 20px 60px;
+    cursor: pointer;
+}
+
+.about-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}

@@ -1,0 +1,46 @@
+.portfolio_paretn h2{
+    font-family: 'Open Sans', sans-serif;
+    color:  #40525c;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 70px;
+}
+.portfolios{
+    margin-top: 80px;
+    text-align: center;
+}
+.portfolio{
+    display: inline-block;
+    padding-right: 28px;
+    padding-left: 28px;
+}
+.portfolio img{
+    width: 140px;
+    height: 140px;
+}
+.portfolio .detail{
+    margin-top: 34px;
+    margin-bottom: 62px;
+    width: 250px;
+}
+.portfolio .detail span{
+    font-family: 'Open Sans', sans-serif;
+    color: #3070a8;
+    font-size: 22px;
+    font-weight: 300;
+    text-align: center;
+    transform: scaleX(1.0015);
+    text-transform: uppercase;
+}
+.portfolio .detail p{
+    font-family: 'Open Sans', sans-serif;
+    color: #999999;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: center;
+    margin-top: 28px;
+}
