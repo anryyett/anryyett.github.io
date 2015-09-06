@@ -2,7 +2,7 @@
     background: url(../images/bkg.jpg) 100% 100% no-repeat;
     max-width: 100%;
     background-size: cover;
-    padding: 50px 160px 35px;
+    padding: 50px 160px 35px 0;
     text-align: center;
     margin: auto;
 }

@@ -12,9 +12,8 @@
 .contact_box{
     float: left;
     width: 50%;
-}
-.contact{
-    margin-top: 50px;
+    box-sizing: border-box;
+    padding: 32px 0 10px 14%;
 }
 .adress{
     line-height: 2em;
