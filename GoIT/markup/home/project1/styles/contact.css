@@ -1,0 +1,53 @@
+.contact_parent{
+    width: 1024px;
+    margin: auto;
+}
+.map{
+    background: url(../images/map.jpg) 100% 100% no-repeat;
+    max-width: 50%;
+    height: 345px;
+    background-size: cover;
+    margin-left: 50%;
+}
+.contact_box{
+    float: left;
+    width: 50%;
+}
+.contact{
+    margin-top: 50px;
+}
+.adress{
+    line-height: 2em;
+}
+.adress:before{
+    content: '';
+    background: url("../images/info1.png");
+    position: absolute;
+    display: block;
+    width: 23px;
+    height: 31px;
+    margin-left: -35px;
+}
+.mobile:before{
+    content: '';
+    background: url("../images/info2.png");
+    position: absolute;
+    display: block;
+    width: 18px;
+    height: 26px;
+    margin-left: -35px;
+}
+.email:before{
+    content: '';
+    background: url("../images/info3.png");
+    position: absolute;
+    display: block;
+    margin-left: -37px;
+    margin-bottom: 37px;
+    width: 23px;
+    height: 16px;
+}
+.social{
+    margin-top: 37px;
+    margin-bottom: 32px;
+}

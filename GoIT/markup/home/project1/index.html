@@ -7,27 +7,30 @@
     <link rel="stylesheet" href="styles/header.css" type="text/css">
     <link rel="stylesheet" href="styles/portfolio.css" type="text/css">
     <link rel="stylesheet" href="styles/services.css" type="text/css">
+    <link rel="stylesheet" href="styles/pricing.css" type="text/css">
+    <link rel="stylesheet" href="styles/responses.css" type="text/css">
+    <link rel="stylesheet" href="styles/contact.css" type="text/css">
 </head>
 <body>
 <div class="companyName">
     <div class="header">
         <div class="logo"><span>Company</span> Name</div>
         <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Portfolio">Portfolio</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#Pricing">Pricing</a></li>
+            <li><a href="#Contact">Contact</a></li>
         </ul>
     </div>
-    <div class="about">
+    <div id="Home" class="about">
         <p class="about-title">We are specialist in<span>Responsive designs, Stationary And wordpress Themes</span></p>
         <p class="about-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
         <button class="about-button">Button Name</button>
     </div>
 </div>
-<div class="portfolio_paretn">
+<div id="Portfolio" class="portfolio_paretn">
     <h2>Lorem Ipsum is simply dummy text of the printing</h2>
     <div class="portfolios">
         <div class="portfolio">
@@ -54,7 +57,7 @@
         </div>
     </div>
 </div>
-<div class="services_parent">
+<div id="Services" class="services_parent">
     <div class="services">
         <h2>Lorem Ipsum is simply dummy text of the printing
             and typesetting industry. Lorem Ipsum has been....</h2>
@@ -70,6 +73,131 @@
                 dummy text of the printing and typesetting industry.</li>
         </ul>
     </div>
+</div>
+<div id="Pricing" class="pricing_parent">
+    <h2>We have a very flexible offers for you to choose</h2>
+    <div class="prices">
+        <div class="pricing pricing_left">
+            <div class="prices_header">
+                <span>Standard</span>
+            </div>
+            <h3>Iconic Graphics</h3>
+            <div class="price">
+                <sup>$</sup><span>10</span><sub>Monthly</sub>
+            </div>
+            <ul class="opportunity">
+                <li>Unmetered Traffic</li>
+                <li>Unlimited Domain</li>
+                <li>Unlimited Databases</li>
+                <li>Unlimited e-Mails</li>
+            </ul>
+            <button class="btnEnroll">Enroll Today</button>
+        </div><div class="pricing select">
+        <div class="prices_header">
+            <span>Best Value</span>
+        </div>
+        <h3>Iconic Graphics</h3>
+        <div class="price">
+            <sup>$</sup><span>25</span><sub>Monthly</sub>
+        </div>
+        <ul class="opportunity">
+            <li>PHP, PERL, ASP, JSP</li>
+            <li>SEMI DEDICATED</li>
+            <li>Staging or Production</li>
+            <li>Unlimited e-Mails</li>
+        </ul>
+        <button class="btnEnroll">Enroll Today</button>
+    </div><div class="pricing pricing_right">
+        <div class="prices_header">
+            <span>Ultimate</span>
+        </div>
+        <h3>Iconic Graphics</h3>
+        <div class="price">
+            <sup>$</sup><span>35</span><sub>Monthly</sub>
+        </div>
+        <ul class="opportunity">
+            <li>Semi Dedicated</li>
+            <li>1TB Storage</li>
+            <li>Faster Site, Better SEO</li>
+            <li>Unlimited e-Mails</li>
+        </ul>
+        <button class="btnEnroll">Enroll Today</button>
+    </div>
+    </div>
+</div>
+<div id="About" class="responses_parent">
+    <h2><span>What</span> Client Says</h2>
+    <div class="responses">
+        <div class="response">
+            <img src="images/girl.png" width="100">
+            <div class="comment">
+                <div class="comment_header">
+                    <a href="#" class="username">Staciya Trollio</a>
+                    <a href="#" class="status">Customer</a>
+                </div>
+                <p class="text">Lorem Ipsum is simply dummy text of the printing
+                    and industry. Lorem Ipsum has been the industry.</p>
+            </div>
+        </div>
+        <div class="response">
+            <img src="images/boy.png" width="100">
+            <div class="comment">
+                <div class="comment_header">
+                    <a href="#" class="username">David Soul</a>
+                    <a href="#" class="status">Customer</a>
+                </div>
+                <p class="text">Lorem Ipsum is simply dummy text of the printing
+                    and industry. Lorem Ipsum has been the industry.</p>
+            </div>
+        </div>
+        <div class="response">
+            <img src="images/girl.png" width="100">
+            <div class="comment">
+                <div class="comment_header">
+                    <a href="#" class="username">Staciya Trollio</a>
+                    <a href="#" class="status">Customer</a>
+                </div>
+                <p class="text">Lorem Ipsum is simply dummy text of the printing
+                    and industry. Lorem Ipsum has been the industry.</p>
+            </div>
+        </div>
+        <div class="response">
+            <img src="images/boy.png" width="100">
+            <div class="comment">
+                <div class="comment_header">
+                    <a href="#" class="username">David Soul</a>
+                    <a href="#" class="status">Customer</a>
+                </div>
+                <p class="text">Lorem Ipsum is simply dummy text of the printing
+                    and industry. Lorem Ipsum has been the industry.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="Contact" class="contact_parent">
+    <div class="contact_box">
+        <div class="contact">
+            <p class="adress">Iconic Graphics
+                <br>
+                123 Main Street
+                <br>
+                EastWest
+                <br>
+                LHR 54500</p>
+            <p class="mobile">012.345.6789</p>
+            <p class="email">info@iconicgraphics.com</p>
+        </div>
+        <div class="social">
+            <a class="facebook" href="#"><img src="images/facebook.png"></a>
+            <a class="twiter" href="#"><img src="images/twiter.png"></a>
+            <a class="linkedin" href="#"><img src="images/linkedin.png"></a>
+        </div>
+    </div>
+    <div class="map"></div>
+</div>
+<div class="footer">
+    <p>Copyright © 2014 <b>Company Name.</b> All rights reserved.</p>
+    <p>Designed by <span>IconicGraphics.com</span></p>
 </div>
 </body>
 </html>

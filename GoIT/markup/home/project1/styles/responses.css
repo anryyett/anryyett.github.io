@@ -1,0 +1,95 @@
+.responses_parent{
+    background: url(../images/bkg.jpg) 100% 100% no-repeat;
+    max-width: 100%;
+    background-size: cover;
+    padding: 50px 160px 35px;
+    text-align: center;
+    margin: auto;
+}
+.responses_parent h2{
+    font-family: 'Calibri Italic', sans-serif;
+    color:  #3170a8;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 57px;
+}
+.responses_parent span{
+    color:  #ee8129;
+}
+.responses{
+    width: 1024px;
+    margin: 25px auto 79px;
+}
+.response{
+    display: inline-block;
+    width: 480px;
+    vertical-align: top;
+    margin-top: 25px;
+    position: relative;
+}
+.comment:before{
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-right: 22px solid #f7f7f7;
+    display: block;
+    position: absolute;
+    left: 109px;
+    top: 35px;
+}
+.photo{
+    width: 100px;
+    height: 100px;
+}
+.response img{
+    float: left;
+}
+.comment_header{
+    border-bottom: 1px dashed #666666;
+    font-family: 'Calibri Italic', sans-serif;
+    font-size: 13px;
+    font-style: italic;
+    letter-spacing: 0.325px;
+    padding-bottom: 6px;
+    text-align: left;
+}
+.comment_header a{
+    text-decoration: none;
+    color:  #3070a8;
+    line-height: 24px;
+    vertical-align: middle;
+    font-weight: 700;
+}
+.comment_header .status{
+    float: right;
+}
+.username:before{
+    content: '- ';
+}
+.comment{
+    border: 1px solid  #e0e0e0;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.17);
+    max-height: 104px;
+    margin-left: 126px;
+    padding: 10px 20px 10px 20px;
+    overflow: hidden;
+}
+.comment p{
+    color:  #666666;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.325px;
+    text-align: left;
+    margin-top: 8px;
+}
+.response:nth-child(2n+1){
+    margin-right: 40px;
+}
