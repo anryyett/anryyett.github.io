@@ -2,9 +2,11 @@
     background: url(../images/bkg.jpg) 100% 100% no-repeat;
     max-width: 100%;
     background-size: cover;
-    padding: 50px 160px 35px 0;
+    padding: 50px 160px 35px;
     text-align: center;
     margin: auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 .responses_parent h2{
     font-family: 'Calibri Italic', sans-serif;
