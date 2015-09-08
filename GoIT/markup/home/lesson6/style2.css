@@ -4,14 +4,16 @@
 }
 .responses_parent{
     background: url(images/bkg.jpg) 100% 100% no-repeat;
-    background-size: cover; /* ???????????? ??? */
+    max-width: 100%;
+    background-size: cover;
     padding: 50px 160px 35px;
-    width: 1400px;
     text-align: center;
     margin: auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 .responses_parent h2{
-    font-family: Trebuchet MS, sans-serif;
+    font-family: 'Calibri Italic', sans-serif;
     color:  #3170a8;
     font-size: 40px;
     font-weight: 400;
@@ -19,16 +21,18 @@
     line-height: 18px;
     text-align: center;
     text-transform: uppercase;
+    margin-top: 57px;
 }
 .responses_parent span{
     color:  #ee8129;
 }
 .responses{
-    margin-top: 25px;
+    width: 1024px;
+    margin: 25px auto 79px;
 }
 .response{
     display: inline-block;
-    width: 500px;
+    width: 480px;
     vertical-align: top;
     margin-top: 25px;
     position: relative;
@@ -54,7 +58,7 @@
 }
 .comment_header{
     border-bottom: 1px dashed #666666;
-    font-family: Trebuchet MS, sans-serif;
+    font-family: 'Calibri Italic', sans-serif;
     font-size: 13px;
     font-style: italic;
     letter-spacing: 0.325px;
