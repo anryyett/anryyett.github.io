@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    position: relative;
 }
 .wrap{
     background-color:  #f6f9f9;
@@ -68,4 +69,52 @@ body{
 }
 .zoom:hover, .link:hover {
     background: rgba(40, 180, 247, 1);
+}
+
+.show-image{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, .9);
+    padding-top: 235px;
+
+}
+.big-image{
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #999;
+    position: relative;
+    z-index: 10;
+}
+.big-image img{
+    width: 100%;
+    display: block;
+}
+.btn-close{
+    width: 40px;
+    height: 40px;
+    background-color: #25a6f7;
+    position: absolute;
+    top: 0;
+    right: 23px;
+    z-index: 100;
+    margin-top: -21px;
+    cursor: pointer;
+}
+.btn-close:hover{
+    background-color: #f74c26;
+}
+.btn-close:before{
+    content: "";
+    line-height: 40px;
+    background: url("../images/icons.png") 0 -33px;
+    width: 14px;
+    height: 11px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 13px;
 }
