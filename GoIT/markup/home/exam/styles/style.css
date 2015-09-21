@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css?family=Oleo+Script);
+@import url(https://fonts.googleapis.com/css?family=Oxygen);
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url("../images/bg.jpg") repeat;
+}
+.wrap{
+    border-radius: 3px;
+    background-color:  #ffffff;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
+    width: 972px;
+    height: 1391px;
+    margin: 61px auto 84px;
+}
+.logo{
+    font-family: 'Oleo Script', cursive;
+    color: #222222;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: left;
+    padding: 30px;
+    width: 216px;
+    display: inline-block;
+    float: left;
+}
+.logo p{
+    font-family: Arial;
+    color:  #999999;
+    font-size: 11px;
+    font-weight: 400;
+}
+.header{
+    display: inline-block;
+    text-align: center;
+    float: right;
+}
+.menu{
+    margin-right: 20px;
+    position: relative;
+}
+.menu .menuItem{
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+}
+.menu a{
+    font-family: 'Oxygen', sans-serif;
+    text-decoration: none;
+    color:  #666666;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+}
+.menu .submenu{
+    display: none;
+    text-align: left;
+}
+.menu .submenu li {
+    list-style: none;
+}
+.menu .menuItem:hover  .submenu{
+    position: absolute;
+    display: block;
+    color: #222222;
+    left: 282px;
+    top: 43px;
+}
+.menu .btn {
+    text-align: center;
+    color: white;
+    text-shadow: 0 -1px 1px rgba(198, 141, 30, 0.7);
+    background-image: linear-gradient(to bottom, #FFC654 0%, #FFBA43 100%);
+    border-radius: 3px;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5) inset;
+    padding: 5px;
+}
+
+.menu .btn:hover {
+    background: #ffad19;
+    color:  #222222;
+}
