@@ -6,13 +6,41 @@ body{
     padding: 0;
     background: url("../images/bg.jpg") repeat;
 }
-.wrap{
+.wrap,
+.wrap:before,
+.wrap:after{
     border-radius: 3px;
     background-color:  #ffffff;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.15);
     width: 972px;
-    overflow: hidden;
+    /*overflow: hidden;*/
     margin: 61px auto 84px;
+    border: 1px solid #eaeaea;
+    position: relative;
+}
+.wrap:before{
+    z-index: -2;
+    width: 970px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    position: absolute;
+    bottom: -91px;
+    left: -1px;
+    content: ''
+}
+.wrap:after{
+    z-index: -1;
+    width: 970px;
+    height: 200px;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -88px;
+    left: -1px;
+    content: ''
 }
 .wrap_header{
     display: block;
@@ -67,7 +95,6 @@ body{
     border: 1px solid #dddddd;
     border-radius: 4px;
     width: 164px;
-    max-height: 157px;
     z-index: 1;
     padding: 10px 10px;
 
@@ -117,13 +144,14 @@ body{
 }
 .submenu  > li:hover{
     color: #222222;
-    height: 43px;
+    height: 46px;
 }
 .submenu  > li:hover a{
     background-color:  #f3f3f3;
     border-radius: 3px;
     margin-left: -5px;
     margin-right: -5px;
+    padding-left: 10px!important;
 }
 .submenu li:hover span{
     visibility: visible;
@@ -136,9 +164,12 @@ body{
     padding-left: 5px;
     height: 38px;
     box-sizing: border-box;
+    margin-top: 4px;
 }
 .submenu .subfirstchild{
     border: 0 !important;
+    padding-top: 1px;
+    margin-top: -1px;
 }
 .triangle:before {
     position: absolute;
@@ -221,10 +252,18 @@ body{
 }
 .wrap_trailer{
     border-radius: 3px;
-    background-color:  #ffbf48;
-    background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
-    background: -o-linear-gradient(90deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
-    background: -ms-linear-gradient(90deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
+    /*background-color:  #ffbf48;*/
+    /*background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);*/
+    /*background: -o-linear-gradient(90deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);*/
+    /*background: -ms-linear-gradient(90deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);*/
+    background: rgb(255,195,81);
+    background: -moz-linear-gradient(top,  rgba(255,195,81,1) 0%, rgba(255,184,65,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,195,81,1)), color-stop(100%,rgba(255,184,65,1)));
+    background: -webkit-linear-gradient(top,  rgba(255,195,81,1) 0%,rgba(255,184,65,1) 100%);
+    background: -o-linear-gradient(top,  rgba(255,195,81,1) 0%,rgba(255,184,65,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(255,195,81,1) 0%,rgba(255,184,65,1) 100%);
+    background: linear-gradient(to bottom,  rgba(255,195,81,1) 0%,rgba(255,184,65,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc351', endColorstr='#ffb841',GradientType=0 );
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
     width: 168px;
     height: 40px;
@@ -737,4 +776,38 @@ input[type=radio] {
     font-size: 11px;
     font-weight: 400;
     line-height: 12px;
+}
+.wrap_shadow{
+    position: relative;
+    bottom: 104px;
+    width: 972px;
+    height: 20px;
+    margin: auto;
+    background: #fff;
+    border-radius: 3px;
+    z-index: -3;
+}
+.wrap_shadow:before,
+.wrap_shadow:after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    width: 950px;
+    top: 0;
+    max-width:300px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.7);
+    -webkit-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+    margin: 0 30px;
+}
+.wrap_shadow:after {
+    -webkit-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
 }
