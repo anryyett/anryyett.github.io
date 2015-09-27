@@ -787,9 +787,11 @@ input[type=radio] {
     line-height: 30px;
     text-align: left;
 }
-.links li{
-    border-bottom: 1px solid rgba(0,0,0,0.1);;
+.links li:hover a{
+    color: #000000;
 }
+.links li{
+    border-bottom: 1px solid rgba(0,0,0,0.1);;}
 .links li:last-child{
     border: 0;
 }
@@ -842,6 +844,9 @@ input[type=radio] {
     font-size: 11px;
     font-weight: 400;
     line-height: 12px;
+}
+.articles .item:hover a{
+    color: #000000;
 }
 .wrap_shadow{
     position: relative;
