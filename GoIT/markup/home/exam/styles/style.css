@@ -677,7 +677,7 @@ input[type=radio] {
     padding:14px 0;
     font-size: 14px;
     font-family: Arial, sans-serif;
-    color: rgb(102, 102, 102);
+    color:  #999999;
     text-align: center;
     cursor: pointer;
     margin: -1px -1px 0 0;
@@ -693,6 +693,7 @@ input[type=radio] {
     display: block;
 }
 .tabs [id^="tab"]:checked + label {
+    color: rgb(102, 102, 102);
     background: #FFF;
     border-bottom: 1px solid #fff;
     z-index: 10;
