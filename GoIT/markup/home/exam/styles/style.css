@@ -272,7 +272,6 @@ body{
 
 }
 .slider_navigation .location{
-/* В�?троенный �?тиль */
     color:  #676767;
     font-size: 11px;
     font-weight: 400;
@@ -317,10 +316,6 @@ body{
 }
 .wrap_trailer{
     border-radius: 3px;
-    /*background-color:  #ffbf48;*/
-    /*background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);*/
-    /*background: -o-linear-gradient(90deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);*/
-    /*background: -ms-linear-gradient(90deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);*/
     background: rgb(255,195,81);
     background: -moz-linear-gradient(top,  rgba(255,195,81,1) 0%, rgba(255,184,65,1) 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,195,81,1)), color-stop(100%,rgba(255,184,65,1)));
@@ -412,7 +407,6 @@ body{
 /*articles*/
 .wrap_articles{
     height: 420px;
-    margin: 12px 17px 0;
     box-sizing: border-box;
 }
 .wrap_articles h2{
@@ -421,8 +415,7 @@ body{
     font-size: 18px;
     font-weight: 400;
     text-align: left;
-    margin-bottom: 14px;
-    margin-top: 0;
+    margin: 12px 17px 14px;
 }
 .wrap_article_img{
     border: 1px solid #f1f1f1;
@@ -573,7 +566,7 @@ body{
 .article{
     width: 300px;
     float: left;
-    margin-left: 19px;
+    margin-left: 18px;
 }
 .article_text{
     font-family: Arial, sans-serif;
@@ -612,17 +605,9 @@ body{
     margin: 0;
     padding: 0 10px 12px;
 }
-.article_right{
-     float: right;
- }
-.article_left{
-    float: left;
-    margin-left: 0;
-}
 /*tabs*/
 .wrap_tabs{
     margin: 0 20px 0;
-    /*border-bottom: 1px solid #c6c6c6;*/
     padding-bottom: 30px;
     -webkit-box-shadow: 0 3px 2px -2px rgba(122,121,122,1);
     -moz-box-shadow: 0 3px 2px -2px rgba(122,121,122,1);
@@ -647,7 +632,6 @@ body{
     border-radius: 3px;
     border: 1px solid #ececec;
     background-color:  #ffffff;
-    /*background-color: #fafafa;*/
     width: 932px;
     height: 236px;
 }
