@@ -3,7 +3,6 @@
  */
 var name = 'admin', text;
 
-var name = 'manager', text;
 text = (name == 'admin') ? 'Hi' :
     (name == 'manager') ? text = 'Hello':
         (name == '') ? 'No login' : '';
