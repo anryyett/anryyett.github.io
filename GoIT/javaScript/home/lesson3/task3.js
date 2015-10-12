@@ -1,8 +1,8 @@
 /**
  * Created by Elena on 10/8/2015.
  */
+var result = "";
 for (var i = 1; i <= 100; i++) {
-    var result = "";
 
     if (i % 3 == 0) {
         result = "Fizz";

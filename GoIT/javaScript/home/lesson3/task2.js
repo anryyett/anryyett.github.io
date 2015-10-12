@@ -3,10 +3,9 @@
  */
 var a=2, b=10;
 
-out:
-    for (var i = a; i < b; i++) {
+outer:  for (var i = a; i < b; i++) {
         for (var j = a; j < i; j++) {
-            if(i % j == 0) continue out;
+            if(i % j == 0) continue outer;
         }
         console.log(i);
     }
