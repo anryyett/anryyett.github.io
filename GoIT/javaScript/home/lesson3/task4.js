@@ -1,6 +1,6 @@
-for (var i = 1; i <= 100; i++) {
+var result = "";
 
-    var result = "";
+for (var i = 1; i <= 100; i++) {
     if (i % 3 == 0) {
         result += "Fizz";
     }
