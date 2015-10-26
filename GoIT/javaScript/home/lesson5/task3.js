@@ -3,7 +3,7 @@
  */
 var numbers = [];
 do {
-    var number = prompt('Пожалуйста введите число больше',0);
+    number = prompt('Пожалуйста введите число больше',0);
     if (number === null || number === "" || isNaN(number)){
         break;
     }
