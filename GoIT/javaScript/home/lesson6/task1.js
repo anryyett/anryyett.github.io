@@ -13,5 +13,8 @@ function removeClass(obj, cls){
             i--;
         }
     }
-    return console.log(arr);
+    obj.className = arr;
 }
+removeClass(obj, 'menu');
+
+console.log( obj.className );
