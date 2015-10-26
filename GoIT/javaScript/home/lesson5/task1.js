@@ -8,9 +8,11 @@ var tasksCompleted = {
     'Anton': 99,
 };
 var max = 0;
+var name="";
 for(var p in tasksCompleted){
     if(tasksCompleted[p] > max){
-        max = p;
+        max = tasksCompleted[p];
+        name = p;
     }
 }
-console.log(max);
+console.log(name);
