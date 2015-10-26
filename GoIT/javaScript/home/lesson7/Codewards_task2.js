@@ -2,10 +2,10 @@
  * Created by Elena on 10/24/2015.
  */
 function createSecretHolder(secret) {
+    var _secret = secret;
     var obj = {
-        mySecret: secret,
-        getSecret: function(){ return this.mySecret;},
-        setSecret: function(secret){  this.mySecret = secret;},
+        getSecret: function(){ return _secret;},
+        setSecret: function(secret){  _secret = secret;},
     };
     return obj;
 }
