@@ -23,7 +23,7 @@ var a, b;
 
 a = f(1);
 b = f(1);
-console.log( a == b ); // true (значение закешировано)
+console.log( a == b );
 
 b = f(2);
-console.log( a == b ); // false, другой аргумент => другое значение
+console.log( a == b );
