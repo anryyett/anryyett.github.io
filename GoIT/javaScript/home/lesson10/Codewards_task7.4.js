@@ -3,18 +3,21 @@
  */
 function pattern(n){
     var output='';
-    for(var i=1; i<=n; i++){
-        for(var j=1; j<=n-i; j++){
-            output+=' ';
+    if(n > 0) {
+        var lines = [];
+        var line = Array(n).join(' ');
+
+        for(i=1; i<=n; i++) {
+            line+= i%10;
         }
-        for(var j=1; j<=n; j++){
-            output+= '' + j;
+        lines.push(line);
+
+        for(i=1; i<n; i++) {
+            lines.push(lines[i-1].substring(1) + ' ');
         }
-        for(var j=0; j<=i; j++){
-            output+=' ';
-        }
-        output+='\n';
+        output += lines.join('\n');
     }
-    console.log(output);
     return output;
 }
+
+console.log(pattern(5));
