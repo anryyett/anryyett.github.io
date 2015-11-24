@@ -1,4 +1,4 @@
-﻿function CoffeeMachine(power, capacity) {
+function CoffeeMachine(power, capacity) {
   //...
   this.setWaterAmount = function(amount) {
     if (amount < 0) {
