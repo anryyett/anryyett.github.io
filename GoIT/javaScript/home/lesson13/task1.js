@@ -1,5 +1,4 @@
 function CoffeeMachine(power, capacity) {
-  //...
   this.setWaterAmount = function(amount) {
     if (amount < 0) {
       throw new Error("Значение должно быть положительным");

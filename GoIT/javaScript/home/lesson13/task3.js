@@ -8,7 +8,6 @@
   }
 
   this.setWaterAmount = function(amount) {
-    // ... проверки пропущены для краткости
     waterAmount = amount;
   };
 

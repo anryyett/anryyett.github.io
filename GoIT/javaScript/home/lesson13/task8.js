@@ -14,10 +14,9 @@
 }
 
 function Fridge(power) {
-  // унаследовать
   Machine.apply(this, arguments);
 
-  var food = []; // приватное свойство food
+  var food = [];
 
   this.addFood = function() {
     if (!this._enabled) {
@@ -27,13 +26,12 @@ function Fridge(power) {
       throw new Error("Нельзя добавить, не хватает мощности");
     }
     for (var i = 0; i < arguments.length; i++) {
-      food.push(arguments[i]); // добавить всё из arguments
+      food.push(arguments[i]);
     }
 
   };
 
   this.getFood = function() {
-    // копируем еду в новый массив, чтобы манипуляции с ним не меняли food
     return food.slice();
   };
 
