@@ -1,11 +1,19 @@
 /**
  * Created by Elena on 10/28/2015.
  */
-var arr = ['link', 'menu', 'menu__item', 'menu__item', 'header', 'link', 'footer', 'sidebar', 'link'];
-var newarr = [];
-for(var i=0; i<arr.length; i++){
-    if(newarr.indexOf(arr[i]) === -1){
-        newarr.push(arr[i]);
+function uniqueElemants(arr){
+  var obj = {};
+  for(var i=0; i<arr.length; i++){
+    if (obj[arr[i]]) {
+      obj[arr[i]]++;
+    } else {
+      obj[arr[i]] = 1;
     }
+  }
+  return Object.keys(obj).sort(function (a, b) {
+    return obj[b] - obj[a];
+  });
 }
-console.log(newarr);
+
+var inputArr = ['link', 'menu', 'menu__item', 'menu__item', 'header', 'link', 'footer', 'sidebar', 'link'];
+console.log(uniqueElemants(inputArr));
