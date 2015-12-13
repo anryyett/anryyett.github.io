@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task10</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td,
+        th {
+            border: 2px solid black;
+            padding: 4px;
+            text-align: center;
+        }
+        th {
+            font-weight: bold;
+            background-color: #cccccc;
+        }
+    </style>
+</head>
+    <table>
+        <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Отчество</th>
+            <th>Возраст</th>
+        </tr>
+        <tr>
+            <td>Вася</td>
+            <td>Петров</td>
+            <td>Александрович</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Петя</td>
+            <td>Иванов</td>
+            <td>Петрович</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Владимир</td>
+            <td>Ленин</td>
+            <td>Ильич</td>
+            <td>9</td>
+        </tr>
+    </table>
+<button onclick="sort()">Sort</button>
+    <script>
+        function sort() {
+            var tbody = document.getElementsByTagName('tbody')[0];
+            var rows = [];
+            for (var i = 1; i < tbody.children.length; i++) {
+                rows.push(tbody.children[i]);
+            }
+            rows.sort(function(a, b) {
+                return a.children[3].innerHTML - b.children[3].innerHTML;
+            });
+            for (var j = 0; j < rows.length; j++) {
+                tbody.appendChild(rows[j]);
+            }
+        }
+    </script>
+</body>
+</html>

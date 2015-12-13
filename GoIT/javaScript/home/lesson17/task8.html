@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task8</title>
+    <style>
+        #clock{
+            text-align: center;
+            font-size: 100px;
+        }
+        .hour {
+            color: #ff1493;
+        }
+        .min {
+            color: #b13eff;
+        }
+        .sec {
+            color: #ee8129;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock">
+        <span class="hour">hh</span>:<span class="min">mm</span>:<span class="sec">ss</span>
+    </div>
+
+    <script>
+        setInterval(function () {
+            var clock = document.getElementById('clock');
+
+            var date = new Date();
+
+            var hours = date.getHours();
+            if (hours < 10) {
+                hours = '0' + hours;
+            }
+
+            var min = date.getMinutes();
+            if (min < 10) {
+                min = '0' + min;
+            }
+
+            var sec = date.getSeconds();
+            if (sec < 10) {
+                sec = '0' + sec;
+            }
+
+            clock.children[0].innerHTML = hours;
+            clock.children[1].innerHTML = min;
+            clock.children[2].innerHTML = sec;
+        }, 1000);
+    </script>
+</body>
+</html>
