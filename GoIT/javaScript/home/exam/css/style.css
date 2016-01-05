@@ -81,38 +81,42 @@
     bottom: 100px;
     left: 1056px;
 
-    width: 130px;
-    height: 256px;
+    /*width: 130px;
+    height: 256px;*/
 
     background: url(../images/gunman.png) no-repeat;
     background-size: 1403% auto;
 }
-.enemy_move
+.enemy_1{
+    width: 130px;
+    height: 256px;
+}
+.move_enemy_1
 {
     left: 463px;
     transition: left 4s linear;
 }
-.enemy_walk{
-    animation: walk .4s steps(3) infinite;
+.walk_enemy_1{
+    animation: walk_1 .4s steps(3) infinite;
 }
 
-@keyframes walk {
+@keyframes walk_1 {
     from { background-position: 0px 0px; }
     to { background-position: -384px 0px; }
 }
 
-.enemy_stay{
+.stay_enemy_1{
     left: 463px;
     background-position: -784px 0px;
 }
 
-.enemy_fire {
+.fire_enemy_1 {
     left: 463px;
-    animation: fire 2s step-start;
+    animation: fire_1 2s step-start;
     animation-iteration-count: 1;
 }
 
-@keyframes fire {
+@keyframes fire_1 {
     from
     {
         background-position: -784px 0px;
@@ -126,29 +130,290 @@
         background-position: -1050px 0px;
     }
 }
-.enemy_dead
+.dead_enemy_1
 {
     left: 463px;
-    animation: dead 2s step-start;
+    animation: dead_1 2s step-start;
     animation-iteration-count: 1;
 }
-@keyframes dead
+@keyframes dead_1
 {
     0%
     {
-        background-position: -1182px 0;
+        background-position: -1182px 0px;
     }
     20%
     {
-        background-position: -1314px 0;
+        background-position: -1314px 0px;
     }
     60%
     {
-        background-position: -1444px 0;
+        background-position: -1444px 0px;
     }
     100%
     {
-        background-position: -1570px 0;
+        background-position: -1570px 0px;
     }
 }
+/* enemy_2 */
+.enemy_2{
+    width: 149px;
+    height: 335px;
+    background-size: auto 500%;
+}
+.move_enemy_2
+{
+    left: 463px;
+    transition: left 4s linear;
+}
+.walk_enemy_2{
+    animation: walk_2 .4s steps(3) infinite;
+}
 
+@keyframes walk_2 {
+    from { background-position: 0px -312px; }
+    to { background-position: -466px -312px; }
+}
+
+.stay_enemy_2{
+    left: 463px;
+    background-position: -456px -312px;
+}
+
+.fire_enemy_2 {
+    left: 463px;
+    width: 122px;
+    animation: fire_2 2s step-start;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fire_2 {
+    from
+    {
+        background-position: -598px -312px;
+    }
+    30%
+    {
+        background-position: -718px -312px;
+    }
+    60%
+    {
+        background-position: -836px -312px;
+    }
+    to
+    {
+        background-position: -962px -312px;
+    }
+}
+.dead_enemy_2
+{
+    left: 463px;
+    width: 124px;
+    background-position: -1100px -312px;
+}
+@keyframes dead_2
+{
+    0%
+    {
+        background-position: -1182px -270px;
+    }
+    20%
+    {
+        background-position: -1314px -270px;
+    }
+    60%
+    {
+        background-position: -1444px -270px;
+    }
+    100%
+    {
+        background-position: -1570px -270px;
+    }
+}
+/* enemy_3 */
+.enemy_3{
+    width: 108px;
+    height: 297px;
+    background-size: auto 451%;
+}
+.move_enemy_3
+{
+    left: 463px;
+    transition: left 4s linear;
+}
+.walk_enemy_3{
+    animation: walk_3 .4s steps(3) infinite;
+}
+
+@keyframes walk_3 {
+    from { background-position: 7px -525px; }
+    to { background-position: -304px -525px; }
+}
+
+.stay_enemy_3{
+    left: 463px;
+    background-position: -304px -525px;
+}
+
+.fire_enemy_3 {
+    left: 463px;
+    width: 112px;
+    animation: fire_3 2s step-start;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fire_3 {
+    from
+    {
+        background-position: -416px -525px;
+    }
+    50%
+    {
+        background-position: -525px -525px;
+    }
+    to
+    {
+        background-position: -640px -525px;
+    }
+}
+.dead_enemy_3
+{
+    left: 463px;
+    width: 191px;
+    background-position: -750px -525px;
+}
+/*enemy_4*/
+.enemy_4{
+    width: 111px;
+    height: 222px;
+    background-size: auto 525%;
+}
+.move_enemy_4
+{
+    left: 463px;
+    transition: left 4s linear;
+}
+.walk_enemy_4{
+    animation: walk_4 .4s steps(3) infinite;
+}
+
+@keyframes walk_4 {
+    from { background-position: 3px -723px; }
+    to { background-position: -320px -723px; }
+}
+
+.stay_enemy_4{
+    left: 463px;
+    background-position: -320px -723px;
+}
+
+.fire_enemy_4 {
+    left: 463px;
+    animation: fire_4 2s step-start;
+    animation-iteration-count: 1;
+}
+
+@keyframes fire_4 {
+    from
+    {
+        background-position: -425px -723px;
+    }
+    50%
+    {
+        background-position: -531px -723px;
+    }
+    to
+    {
+        background-position: -636px -723px;
+    }
+}
+.dead_enemy_4
+{
+    left: 463px;
+    animation: dead_4 2s step-start;
+    animation-iteration-count: 1;
+}
+@keyframes dead_4
+{
+    from
+    {
+        background-position: -636px -723px;
+    }
+    20%
+     {
+         background-position: -742px -723px;
+     }
+    to
+    {
+        background-position: -851px -723px;
+    }
+}
+/*enemy_5*/
+.enemy_5{
+    width: 104px;
+    height: 224px;
+    background-size: auto 525%;
+}
+.move_enemy_5
+{
+    left: 463px;
+    transition: left 4s linear;
+}
+.walk_enemy_5{
+    animation: walk_5 .4s steps(3) infinite;
+}
+
+@keyframes walk_5 {
+    from { background-position: 0px -953px; }
+    to { background-position: -326px -953px; }
+}
+
+.stay_enemy_5{
+    left: 463px;
+    width: 100px;
+    background-position: -326px -953px;
+}
+
+.fire_enemy_5 {
+    left: 463px;
+    width: 100px;
+    animation: fire_5 2s step-start;
+    animation-iteration-count: 1;
+}
+
+@keyframes fire_5 {
+    from
+    {
+        background-position: -425px -953px;
+    }
+    50%
+    {
+        background-position: -524px -953px;
+    }
+    to
+    {
+        background-position: -626px -953px;
+    }
+}
+.dead_enemy_5
+{
+    left: 463px;
+    width: 100px;
+    animation: dead_5 2s step-start;
+    animation-iteration-count: 1;
+}
+@keyframes dead_5
+{
+    from
+    {
+        background-position: -626px -953px;
+    }
+    20%
+    {
+        background-position: -727px -953px;
+    }
+    to
+    {
+        background-position: -838px -953px;
+    }
+}

@@ -7,8 +7,9 @@
 
         this.messages = {
             fire: 'FIRE !!!',
-            win: 'YOU WIN !!!',
-            lose: 'YOU LOSE !!!'
+            win: 'YOU WON !!!',
+            lose: 'GANMAN WON !!!',
+            wishes: 'Congratulations YOU WON !'
         }
 
         this.domElements = {
@@ -20,8 +21,6 @@
             youTime: document.querySelector('.you_time'),
             ganmanTime: document.querySelector('.ganman_time')
         };
-
-
 
         this.sounds = {
             intro: new Audio('sounds/intro.m4a'),
@@ -37,16 +36,20 @@
             self.domElements.btrStart.addEventListener('click', self.game);
         };
 
-        this.game = function() {
+        this.game = function(level) {
+
             self.domElements.btrStart.style.display = 'none';
+
+            self.level = +level ? +level : 1;
 
             self.fireTime = 1600;
             self.canFire = false;
             self.fault = false;
 
+            self.domElements.enemy.classList.add('enemy_' + self.level);
+
             setTimeout(function(){
                 self.move();
-
             }, 50);
 
             self.domElements.enemy.addEventListener('transitionend', self.fight);
@@ -56,6 +59,7 @@
         this.playerFire = function(){
             self.sounds.intro.pause();
             self.sounds.intro.currentTime = 0;
+
             if(self.canFire){
                 self.sounds.shot.play();
 
@@ -65,6 +69,8 @@
                 self.showMessage(self.messages.win);
 
                 self.sounds.win.play();
+
+                self.nextLevel();
             }else{
                 self.canFire = true;
 
@@ -77,12 +83,25 @@
             self.domElements.enemy.removeEventListener('transitionend', self.fight);
         };
 
+        this.nextLevel = function(){
+            setTimeout(function(){
+                if(self.level != 5){
+                    self.domElements.enemy.classList.remove('enemy_' + self.level);
+                    self.level++;
+                    self.game(self.level);
+                }else {
+                    self.showMessage(self.messages.wishes);
+                }
+            },2000);
+        };
+
         this.move = function () {
             self.sounds.intro.play();
 
             self.clearAnimation();
-            self.domElements.enemy.classList.add('enemy_move');
-            self.domElements.enemy.classList.add('enemy_walk');
+
+            self.domElements.enemy.classList.add('move_enemy_' + self.level);
+            self.domElements.enemy.classList.add('walk_enemy_' + self.level);
         };
 
         this.fight = function(){
@@ -90,7 +109,7 @@
             self.sounds.intro.currentTime = 0;
 
             self.clearAnimation();
-            self.domElements.enemy.classList.add('enemy_stay');
+            self.domElements.enemy.classList.add('stay_enemy_' + self.level);
 
             self.sounds.wait.play();
 
@@ -104,10 +123,9 @@
         };
 
         this.ganmanFire = function () {
-
             self.clearAnimation();
             if (self.canFire) {
-                self.domElements.enemy.classList.add('enemy_fire');
+                self.domElements.enemy.classList.add('fire_enemy_' + self.level);
 
                 setTimeout(function(){
                     self.sounds.shot.play();
@@ -124,19 +142,19 @@
 
         this.dead = function(){
             self.clearAnimation();
-            self.domElements.enemy.classList.add('enemy_dead');
+            self.domElements.enemy.classList.add('dead_enemy_' + self.level);
 
             setTimeout(function() {
-                self.domElements.enemy.classList.remove('enemy_dead');
+                self.domElements.enemy.classList.remove('dead_enemy_' + self.level);
             }, 1000);
         };
 
         this.clearAnimation = function(){
-            self.domElements.enemy.classList.remove('enemy_move');
-            self.domElements.enemy.classList.remove('enemy_walk');
-            self.domElements.enemy.classList.remove('enemy_stay');
-            self.domElements.enemy.classList.remove('enemy_fire');
-            self.domElements.enemy.classList.remove('enemy_dead');
+            self.domElements.enemy.classList.remove('move_enemy_' + self.level);
+            self.domElements.enemy.classList.remove('walk_enemy_' + self.level);
+            self.domElements.enemy.classList.remove('stay_enemy_' + self.level);
+            self.domElements.enemy.classList.remove('fire_enemy_' + self.level);
+            self.domElements.enemy.classList.remove('dead_enemy_' + self.level);
         };
 
         this.showMessage = function(message){
@@ -147,7 +165,7 @@
                 self.domElements.message.classList.remove('game_message_show');
             },2000);
 
-            if(message !== self.messages.fire){
+            if(message === self.messages.lose){
                 setTimeout(function(){
                     self.domElements.btrStart.style.display = 'inline-block';
                 },2000);
