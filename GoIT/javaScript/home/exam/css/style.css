@@ -1,0 +1,154 @@
+.game_header, .game_footer{
+    width: 1056px;
+    background-color: black;
+    display: block;
+    margin: auto;
+    padding: 10px 0;
+}
+.game_header{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: gainsboro;
+}
+.game_header p{
+    margin: 0;
+    visibility: hidden;
+}
+.game_timers{
+    visibility: hidden;
+}
+.game_timers_show{
+    visibility: visible;
+}
+.game_area{
+    width: 1056px;
+    height: 536px;
+    margin: auto;
+
+    position: relative;
+    overflow: hidden;
+
+    text-align:center;
+
+    background: url(../images/bg.png) no-repeat;
+    background-size: 100%;
+}
+
+.btn_start{
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+
+    border: 3px solid #fff;
+    border-radius: 3px;
+    background-color: rgba(36, 230, 149, 0.5);
+
+    padding: 10px 10px;
+
+    position: relative;
+    top: 50%;
+
+    display: inline-block;
+    cursor: pointer;
+}
+
+.game_message{
+    font-size: 26px;
+    color: #fff;
+
+    position: relative;
+    top: 25%;
+    left: 10%;
+
+    margin: auto;
+    padding: 6px;
+
+    background-color: rgba(36, 230, 149, 0.5);
+    border: 3px solid #fff;
+    border-radius: 3px;
+
+    display: none;
+}
+
+.game_message_show {
+    display: inline-block;
+}
+
+.enemy {
+    position: absolute;
+    bottom: 100px;
+    left: 1056px;
+
+    width: 130px;
+    height: 256px;
+
+    background: url(../images/gunman.png) no-repeat;
+    background-size: 1403% auto;
+}
+.enemy_move
+{
+    left: 463px;
+    transition: left 4s linear;
+}
+.enemy_walk{
+    animation: walk .4s steps(3) infinite;
+}
+
+@keyframes walk {
+    from { background-position: 0px 0px; }
+    to { background-position: -384px 0px; }
+}
+
+.enemy_stay{
+    left: 463px;
+    background-position: -784px 0px;
+}
+
+.enemy_fire {
+    left: 463px;
+    animation: fire 2s step-start;
+    animation-iteration-count: 1;
+}
+
+@keyframes fire {
+    from
+    {
+        background-position: -784px 0px;
+    }
+    50%
+    {
+        background-position: -918px 0px;
+    }
+    to
+    {
+        background-position: -1050px 0px;
+    }
+}
+.enemy_dead
+{
+    left: 463px;
+    animation: dead 2s step-start;
+    animation-iteration-count: 1;
+}
+@keyframes dead
+{
+    0%
+    {
+        background-position: -1182px 0;
+    }
+    20%
+    {
+        background-position: -1314px 0;
+    }
+    60%
+    {
+        background-position: -1444px 0;
+    }
+    100%
+    {
+        background-position: -1570px 0;
+    }
+}
+
