@@ -5,22 +5,15 @@
     margin: auto;
     padding: 10px 0;
 }
-.game_header{
+.game_footer{
     display: block;
-    text-align: center;
+    text-align: left;
     font-weight: bold;
     font-size: 20px;
     color: gainsboro;
 }
-.game_header p{
-    margin: 0;
-    visibility: hidden;
-}
-.game_timers{
-    visibility: hidden;
-}
-.game_timers_show{
-    visibility: visible;
+.game_footer p{
+    margin: 0 20px;
 }
 .game_area{
     width: 1056px;
@@ -81,9 +74,6 @@
     bottom: 100px;
     left: 1056px;
 
-    /*width: 130px;
-    height: 256px;*/
-
     background: url(../images/gunman.png) no-repeat;
     background-size: 1403% auto;
 }
@@ -112,7 +102,7 @@
 
 .fire_enemy_1 {
     left: 463px;
-    animation: fire_1 2s step-start;
+    animation: fire_1 1s step-start;
     animation-iteration-count: 1;
 }
 

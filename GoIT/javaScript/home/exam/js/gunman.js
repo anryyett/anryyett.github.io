@@ -9,7 +9,7 @@
             fire: 'FIRE !!!',
             win: 'YOU WON !!!',
             lose: 'GANMAN WON !!!',
-            wishes: 'Congratulations YOU WON !'
+            wishes: 'Congratulations, YOU WON! Your reward is '
         }
 
         this.domElements = {
@@ -17,9 +17,7 @@
             enemy: document.querySelector('.enemy'),
             btrStart: document.querySelector('.btn_start'),
             message: document.querySelector('.game_message'),
-            timers: document.querySelector('.game_timers'),
-            youTime: document.querySelector('.you_time'),
-            ganmanTime: document.querySelector('.ganman_time')
+            money: document.querySelector('.game_money')
         };
 
         this.sounds = {
@@ -34,6 +32,9 @@
 
         this.init = function () {
             self.domElements.btrStart.addEventListener('click', self.game);
+
+            self.fireTime = 1600;
+            self.money = 0;
         };
 
         this.game = function(level) {
@@ -42,7 +43,6 @@
 
             self.level = +level ? +level : 1;
 
-            self.fireTime = 1600;
             self.canFire = false;
             self.fault = false;
 
@@ -70,12 +70,14 @@
 
                 self.sounds.win.play();
 
+                self.updateMoney();
                 self.nextLevel();
             }else{
                 self.canFire = true;
 
                 self.clearAnimation();
                 self.showMessage(self.messages.lose);
+                self.gameOver();
 
                 self.sounds.fault.play();
             }
@@ -87,12 +89,23 @@
             setTimeout(function(){
                 if(self.level != 5){
                     self.domElements.enemy.classList.remove('enemy_' + self.level);
+                    self.fireTime -= 300;
                     self.level++;
                     self.game(self.level);
                 }else {
-                    self.showMessage(self.messages.wishes);
+                    self.showMessage(self.messages.wishes + self.money);
                 }
             },2000);
+        };
+
+        self.updateMoney = function(){
+            self.money += self.level*100;
+            self.domElements.money.textContent = self.money;
+        };
+
+        self.resetMoney = function(){
+            self.money = 0;
+            self.domElements.money.textContent = self.money;
         };
 
         this.move = function () {
@@ -135,10 +148,17 @@
                     self.fault = true;
                     self.sounds.fault.play();
                     self.showMessage(self.messages.lose);
+                    self.gameOver();
                     self.clearAnimation();
                 }, 2000);
             }
         };
+
+        self.gameOver = function(){
+            self.domElements.enemy.classList.remove('enemy_' + self.level);
+            self.resetMoney();
+            self.level=1;
+        }
 
         this.dead = function(){
             self.clearAnimation();
