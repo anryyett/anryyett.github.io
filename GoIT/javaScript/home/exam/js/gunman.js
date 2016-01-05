@@ -93,7 +93,7 @@
                     self.level++;
                     self.game(self.level);
                 }else {
-                    self.showMessage(self.messages.wishes + self.money);
+                    self.showMessage(self.messages.wishes + self.money + '$');
                 }
             },2000);
         };
